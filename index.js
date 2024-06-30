@@ -33,3 +33,46 @@ $("#switch").on("click", function () {
     }
   }, 100);
 });
+
+$(".dark-mode__label").hover(
+  function () {
+    if ($("#mode").is(":checked")) {
+      $(".dark-mode__switch").css("background-color", "hsl(230, 22%, 64%)");
+    } else {
+      $(".dark-mode__switch").css(
+        "background-image",
+        "linear-gradient(90deg, hsl(210, 78%, 66%), hsl(146, 68%, 65%)"
+      );
+    }
+  },
+  function () {
+    if ($("#mode").is(":checked")) {
+      $(".dark-mode__switch").css({
+        "background-image": "none",
+        "background-color": "hsl(230, 22%, 74%)",
+      });
+    } else {
+      $(".dark-mode__switch").css(
+        "background-image",
+        "linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%)"
+      );
+    }
+  }
+);
+
+$(".overview__card").hover(
+  function () {
+    if ($("#mode").is(":checked")) {
+      $(this).css("background-color", "hsl(227, 47%, 86%)");
+    } else {
+      $(this).css("background-color", "hsl(228, 28%, 30%)");
+    }
+  },
+  function () {
+    if ($("#mode").is(":checked")) {
+      $(this).css("background-color", "hsl(227, 47%, 96%)");
+    } else {
+      $(this).css("background-color", "hsl(228, 28%, 20%)");
+    }
+  }
+);
